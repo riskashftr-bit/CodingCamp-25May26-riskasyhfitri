@@ -15,7 +15,7 @@ The implementation follows a bottom-up approach: core data structures and busine
   - Link `css/styles.css` and `js/app.js` files
   - _Requirements: 7.1, 7.2, 7.3, 7.4_
 
-- [-] 2. Implement core data models and validation logic
+- [x] 2. Implement core data models and validation logic
   - [-] 2.1 Create Validator class with static validation methods
     - Implement `validateItemName()`: check non-empty after trim, max 100 characters
     - Implement `validateAmount()`: check numeric, positive (>= 0.01), max 9,999,999.99
@@ -25,8 +25,8 @@ The implementation follows a bottom-up approach: core data structures and busine
 
  
 
-- [ ] 3. Implement Transaction Manager
-  - [~] 3.1 Create TransactionManager class with CRUD operations
+- [x] 3. Implement Transaction Manager
+  - [x] 3.1 Create TransactionManager class with CRUD operations
     - Implement constructor to initialize empty transactions array
     - Implement `addTransaction()`: create transaction object with unique ID (using `crypto.randomUUID()` or timestamp fallback), validate inputs, add to array, return result object
     - Implement `deleteTransaction()`: find by ID, remove from array, return result object
@@ -38,8 +38,8 @@ The implementation follows a bottom-up approach: core data structures and busine
 
  
 
-- [ ] 4. Implement Storage Manager with LocalStorage integration
-  - [~] 4.1 Create StorageManager class with LocalStorage operations
+- [x] 4. Implement Storage Manager with LocalStorage integration
+  - [-] 4.1 Create StorageManager class with LocalStorage operations
     - Implement constructor with storage key parameter ("expense_transactions")
     - Implement `isStorageAvailable()`: detect LocalStorage availability with try-catch
     - Implement `saveTransactions()`: serialize transactions array to JSON, write to LocalStorage with error handling, return result object
@@ -52,8 +52,8 @@ The implementation follows a bottom-up approach: core data structures and busine
 - [ ] 5. Checkpoint - Verify core business logic
   - Ensure all tests pass, ask the user if questions arise.
 
-- [ ] 6. Implement Chart Manager for pie chart visualization
-  - [~] 6.1 Create ChartManager class with Chart.js integration
+- [x] 6. Implement Chart Manager for pie chart visualization
+  - [-] 6.1 Create ChartManager class with Chart.js integration
     - Implement constructor accepting canvas element reference
     - Implement `init()`: initialize Chart.js instance with pie chart configuration (responsive: true, distinct colors for Food/Transport/Fun categories)
     - Implement `updateChart()`: accept category totals object, filter out zero-value categories, update chart data and labels, call chart.update()
@@ -64,7 +64,7 @@ The implementation follows a bottom-up approach: core data structures and busine
 
 
 - [ ] 7. Implement UI Controller for DOM manipulation and event handling
-  - [~] 7.1 Create UIController class with initialization and rendering methods
+  - [-] 7.1 Create UIController class with initialization and rendering methods
     - Implement constructor accepting TransactionManager and StorageManager instances
     - Cache DOM element references (form, inputs, transaction list container, balance display, chart canvas, error message containers)
     - Implement `init()`: load transactions from storage, render initial UI, attach event listeners
